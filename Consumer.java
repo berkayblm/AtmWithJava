@@ -40,6 +40,7 @@ public class Consumer {
         int cardno;
         if (answer.equals("1")) {
             cardno = Integer.parseInt(createCardNo());
+            System.out.println("Your card no is :" + cardno);
         }
         else {
             System.out.println("Enter the card no: ");
@@ -64,7 +65,7 @@ public class Consumer {
         DbCreate.insertInfoAccount(id,name,surname,gender,cardNo,money);
     }
 
-    public  String createCardNo() {
+    public String createCardNo() {
         Random random = new Random();
         String pwd = "";
         for (int i = 0; i < 7; i++) {

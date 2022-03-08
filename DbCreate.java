@@ -162,7 +162,7 @@ public class DbCreate {
     }
 
     public static void checkBalance(int cardNo) {
-        String query = "SELECT currentMoney FROM account WHERE cardNO = " + cardNo;
+        String query = "SELECT currentMoney FROM account WHERE cardNo = " + cardNo;
         try {
             resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
